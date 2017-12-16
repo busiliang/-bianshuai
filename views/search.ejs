@@ -1,0 +1,36 @@
+<% include header %>
+<ul class="archive">
+    <li>
+        <div class="table-responsive ">
+            <table class="table ">
+                <tr>
+                    <th>用户名</th>
+                    <th>姓名</th>
+                    <th>手机</th>
+                    <th>邮箱</th>
+                    <th>注册日期</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                <% docs.forEach(function (doc) { %>
+                <tr>
+                    <td><%= doc.username %></td>
+                    <td><%= doc.reallyname %></td>
+                    <td><%= doc.phone %></td>
+                    <td><%= doc.email %></td>
+                    <td><%= doc.time %></td>
+                    <td>
+                        <button type="button" class="btn btn-default">启用</button>
+                    </td>
+                    <td>
+                        <button  type="submit" class="btn btn-success"><a href="/edit/<%= doc.username %>/<%= doc.time %>" style="color:white">编辑</a></button>
+                        <!--******************************************************************-->
+                        <button  type="submit" class="btn btn-danger"><a href="/remove/<%= doc.username %>/<%= doc.time %>" style="color:white">删除</a></button>
+                    </td>
+                </tr>
+                <% })%>
+            </table>
+        </div>
+    </li>
+</ul>
+<% include footer %>

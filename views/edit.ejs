@@ -1,0 +1,32 @@
+<% include header %>
+<form class="form-horizontal" method="post" action="/edit/<%= doc.username %>">
+    <div class="form-group" style="position: relative;left:calc(50% - 100px);width:200px;">
+        <label for="inputEmail3" class="col-sm-3 control-label col-md-2 col-md-offset-2"
+               style="position: relative;right: 50px;bottom:-30px;">用户名</label>
+        <div class="col-sm-5 " style="margin-bottom: 30px;">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="Username" name="username"
+                   style="width: 300px;height: 40px;"value="<%= doc.username %>" disabled>
+        </div>
+    </div>
+    <div class="form-group" style="position: relative;left:calc(50% - 100px);width:200px;">
+        <label for="inputEmail3" class="col-sm-3 control-label col-md-2 col-md-offset-2"
+               style="position: relative;right: 50px;bottom:-30px;">手机</label>
+        <div class="col-sm-5 " style="margin-bottom: 30px;">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="Phone" name="phone"
+                   style="width: 300px;height: 40px;" value="<%= doc.phone %>">
+        </div>
+    </div>
+    <div class="form-group" style="position: relative;left:calc(50% - 100px);width:200px;">
+        <label for="inputEmail3" class="col-sm-3 control-label col-md-2 col-md-offset-2"
+               style="position: relative;right: 50px;bottom:-30px;">邮箱</label>
+        <div class="col-sm-5 " style="margin-bottom: 30px;">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email"
+            style="width: 300px;height: 40px;" value="<%= doc.email %>">
+        </div>
+    </div>
+    <input type="submit" class="btn btn-success"style="position: relative;left:660px;width:70px;height:33px;background-color: #d9534f;color:white;border-radius: 10px;" value="提交">
+    <button class="btn btn-danger"style="position: relative;left:680px;width:70px;
+    height:33px;background-color: #eee;color:white;border-radius: 10px;" >
+        <a href="/">取消</a></button>
+</form>
+<% include footer %>
